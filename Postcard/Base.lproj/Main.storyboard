@@ -27,7 +27,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="250" width="288" height="30"/>
+                                    <rect key="frame" x="16" y="248" width="288" height="30"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gGi-f4-rQv">
@@ -35,7 +35,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="288" width="288" height="30"/>
+                                    <rect key="frame" x="16" y="286" width="288" height="30"/>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9c9-Un-PWy">
@@ -46,13 +46,22 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="326" width="288" height="30"/>
+                                    <rect key="frame" x="16" y="324" width="288" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="sendMailButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XYF-Bs-Uvz"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEg-TM-Ys4">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="160" width="288" height="80"/>
+                                </variation>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VW1-WU-cTT">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -70,6 +79,7 @@
                                 <exclude reference="gGi-f4-rQv"/>
                                 <exclude reference="9c9-Un-PWy"/>
                                 <exclude reference="xEg-TM-Ys4"/>
+                                <exclude reference="VW1-WU-cTT"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -79,13 +89,15 @@
                                 <include reference="gGi-f4-rQv"/>
                                 <include reference="9c9-Un-PWy"/>
                                 <include reference="xEg-TM-Ys4"/>
+                                <include reference="VW1-WU-cTT"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="enterMessageLabel" destination="xEg-TM-Ys4" id="uij-1B-eAv"/>
                         <outlet property="enterMessageTextField" destination="gGi-f4-rQv" id="BGp-aC-7QD"/>
+                        <outlet property="enterNameLabel" destination="VW1-WU-cTT" id="Vhe-L6-2PB"/>
                         <outlet property="enterNameTextField" destination="W8P-hs-4St" id="J9s-58-Te7"/>
-                        <outlet property="messageLabel" destination="xEg-TM-Ys4" id="ask-ZR-Uae"/>
                         <outlet property="sendMailButton" destination="9c9-Un-PWy" id="mb3-t7-Rm8"/>
                     </connections>
                 </viewController>
